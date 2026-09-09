@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import initialExpenses from "./InitialExpenses";
+
+
 function Expenses() {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");

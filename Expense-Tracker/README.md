@@ -1,16 +1,249 @@
-# React + Vite
+Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and interactive Expense Tracker built with React.js.
+This project is designed as an intermediate-level React application for managing and viewing personal expenses.
 
-Currently, two official plugins are available:
+📌 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The Expense Tracker allows users to add expenses, view their expense records, organize expenses by category, and keep track of their spending.
 
-## React Compiler
+The project demonstrates important React concepts such as:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Functional components
 
-## Expanding the ESLint configuration
+useState and React Hooks
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Props
+
+Event handling
+
+Forms and controlled inputs
+
+Rendering lists with .map()
+
+Conditional rendering
+
+Filtering data
+
+Component-based architecture
+
+Basic responsive UI design
+
+🚀 Features
+
+Add a new expense
+
+Enter expense title and amount
+
+Select an expense category
+
+Display expenses in a list
+
+Calculate/display total expenses
+
+Filter or organize expenses by category
+
+Delete expenses
+
+Interactive user interface
+
+Responsive layout
+
+🛠️ Technologies Used
+
+React.js
+
+JavaScript (ES6+)
+
+HTML5
+
+CSS3
+
+Vite
+
+React Hooks
+
+📂 Project Structure
+
+Expense-Tracker/
+│
+├── public/
+│
+├── src/
+│   ├── Components/
+│   │   ├── ExpenseForm.jsx
+│   │   ├── ExpenseList.jsx
+│   │   └── ...
+│   │
+│   ├── data/
+│   │   └── InitialExpenses.js
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+
+The exact component names may change as the project is developed.
+
+⚙️ Installation and Setup
+
+1. Clone or download the project
+
+Open the project folder in VS Code.
+
+2. Open the terminal
+
+Make sure the terminal is inside the project folder:
+
+cd Expense-Tracker
+
+3. Install dependencies
+
+npm install
+
+4. Start the development server
+
+npm run dev
+
+Vite will provide a local URL, usually similar to:
+
+http://localhost:5173/
+
+Open the URL in your browser.
+
+🧩 React Concepts Practiced
+
+useState
+
+Used to store and update dynamic application data such as:
+
+Expense details
+
+Expense list
+
+Selected category
+
+Form input values
+
+Example:
+
+const [expenses, setExpenses] = useState([]);
+
+Props
+
+Props are used to pass data and functions between components.
+
+.map()
+
+Used to display multiple expenses dynamically:
+
+expenses.map((expense) => (
+  <div key={expense.id}>
+    {expense.title}
+  </div>
+))
+
+.filter()
+
+Used to filter expenses based on category or other conditions:
+
+expenses.filter((expense) => expense.category === selectedCategory)
+
+📊 Example Expense Data
+
+const initialExpenses = [
+  {
+    id: 1,
+    title: "Groceries",
+    amount: 500,
+    category: "Food",
+  },
+  {
+    id: 2,
+    title: "Bus",
+    amount: 100,
+    category: "Transport",
+  },
+  {
+    id: 3,
+    title: "Movie",
+    amount: 300,
+    category: "Entertainment",
+  },
+];
+
+export default initialExpenses;
+
+🎯 Learning Objectives
+
+The main objectives of this project are to learn how to:
+
+Build a React application from scratch.
+
+Divide a UI into reusable components.
+
+Manage application data using React state.
+
+Handle form submissions.
+
+Dynamically render data.
+
+Filter and manipulate arrays.
+
+Create an interactive user experience.
+
+Understand the structure of a real-world React project.
+
+🔮 Future Improvements
+
+Possible future enhancements include:
+
+Edit existing expenses
+
+Local Storage support
+
+Expense charts and graphs
+
+Monthly expense summaries
+
+Date-based filtering
+
+Search expenses
+
+Dark/light mode
+
+Budget limit notifications
+
+Authentication
+
+Backend/database integration
+
+▶️ Available Commands
+
+npm install
+
+Installs all project dependencies.
+
+npm run dev
+
+Starts the development server.
+
+npm run build
+
+Creates a production build.
+
+npm run preview
+
+Previews the production build locally.
+
+👨‍💻 Author
+
+Mohammed Sameer Ahmed
+
+📄 License
+
+This project is created for learning and educational purposes.
