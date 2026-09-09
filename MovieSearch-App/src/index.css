@@ -1,0 +1,1016 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #07101c;
+  color: #f1f5f9;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.nav-bar {
+  height: 76px;
+  width: 100%;
+
+  padding: 0 4%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #091522;
+
+  border-bottom: 1px solid #1c2a3a;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+/* Logo */
+
+.nav-bar h1 {
+  font-size: 25px;
+  font-weight: 700;
+
+  color: #f8fafc;
+
+  margin: 0;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 35px;
+}
+
+
+/* Individual links */
+
+.nav-link {
+  position: relative;
+
+  padding: 27px 3px;
+
+  color: #94a3b8;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #22d3ee;
+}
+
+
+/* Active link */
+
+.nav-link.active {
+  color: #f8fafc;
+}
+
+
+/* Active underline */
+
+.nav-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 8px;
+
+  height: 3px;
+
+  border-radius: 20px;
+
+  background: #22d3ee;
+}
+
+
+/* =========================================================
+   HOME
+========================================================= */
+
+main {
+  min-height: calc(100vh - 76px);
+}
+
+
+/* =========================================================
+   SEARCH SECTION
+========================================================= */
+
+.search-bar {
+  padding: 70px 20px 75px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% -20%,
+      rgba(34, 211, 238, 0.16),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      #091625 0%,
+      #08131f 100%
+    );
+
+  border-bottom: 1px solid #1b2a3b;
+}
+
+
+/* Search container */
+
+.search-container {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SEARCH HEADING
+========================================================= */
+
+.search-heading h2 {
+  margin-bottom: 10px;
+
+  font-size: clamp(32px, 4vw, 46px);
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+
+  color: #f8fafc;
+
+  background: linear-gradient(
+    90deg,
+    #f8fafc 45%,
+    #22d3ee 75%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.search-heading h4 {
+  margin-bottom: 34px;
+
+  color: #8fa1b5;
+
+  font-size: 17px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.search-box {
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(16, 30, 47, 0.95);
+
+  border: 1px solid #2a3d53;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* Search box focus */
+
+.search-box:focus-within {
+  border-color: #22d3ee;
+
+  box-shadow:
+    0 0 0 3px rgba(34, 211, 238, 0.08),
+    0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   SEARCH ICON
+========================================================= */
+
+.search-icon {
+  width: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #8294a9;
+
+  font-size: 30px;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.search-box input {
+  flex: 1;
+
+  height: 100%;
+
+  min-width: 0;
+
+  padding: 0 10px 0 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #f8fafc;
+
+  font-size: 16px;
+}
+
+.search-box input::placeholder {
+  color: #64748b;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
+.search-box button {
+  height: 100%;
+
+  min-width: 125px;
+
+  padding: 0 28px;
+
+  border: none;
+
+  background: #06b6d4;
+
+  color: #06131c;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  transition:
+    background 0.25s ease,
+    transform 0.15s ease;
+}
+
+.search-box button:hover {
+  background: #22d3ee;
+}
+
+.search-box button:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================================
+   MOVIE RESULTS SECTION
+========================================================= */
+
+main > section:not(.search-bar) {
+  max-width: 1500px;
+
+  margin: auto;
+
+  padding: 42px 4% 70px;
+}
+
+
+/* Results header */
+
+main > section:not(.search-bar) > div:first-child {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+
+/* Results title */
+
+main > section:not(.search-bar) h2 {
+  font-size: 21px;
+
+  font-weight: 650;
+
+  color: #f1f5f9;
+}
+
+
+/* Search term */
+
+main > section:not(.search-bar) h2 {
+  color: #f1f5f9;
+}
+
+
+/* Results count */
+
+main > section:not(.search-bar) > div:first-child p {
+  color: #8b9aae;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   MOVIE LIST
+========================================================= */
+
+.movie-list {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   MOVIE CARD
+========================================================= */
+
+.movie-card {
+  min-width: 0;
+
+  padding: 18px;
+
+  display: grid;
+
+  grid-template-columns: 135px 1fr;
+
+  background:
+    linear-gradient(
+      145deg,
+      #102033,
+      #0c1928
+    );
+
+  border: 1px solid #203147;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Card hover */
+
+.movie-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(34, 211, 238, 0.5);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(34, 211, 238, 0.05);
+}
+
+
+/* =========================================================
+   MOVIE POSTER
+========================================================= */
+
+.movie-card img {
+  width: 135px;
+  height: 200px;
+
+  object-fit: cover;
+
+  border-radius: 9px;
+
+  grid-row: span 3;
+
+  background: #172638;
+
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover img {
+  transform: scale(1.025);
+}
+
+
+/* =========================================================
+   MOVIE INFO
+========================================================= */
+
+.movie-info {
+  padding-left: 18px;
+
+  padding-top: 5px;
+}
+
+.movie-info h3 {
+  font-size: 18px;
+
+  line-height: 1.4;
+
+  color: #f8fafc;
+
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   RATING + YEAR
+========================================================= */
+
+.movie-details {
+  padding-left: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 10px;
+}
+
+.movie-details span {
+  font-size: 14px;
+
+  color: #94a3b8;
+}
+
+
+/* Rating */
+
+.movie-details span:first-child {
+  color: #facc15;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   VIEW DETAILS BUTTON
+========================================================= */
+
+.movie-card button {
+  align-self: end;
+
+  width: fit-content;
+
+  margin-left: 18px;
+  margin-top: 15px;
+
+  padding: 9px 16px;
+
+  background: transparent;
+
+  color: #22d3ee;
+
+  border: 1px solid #0891b2;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-transform: capitalize;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.15s ease;
+}
+
+.movie-card button:hover {
+  background: #06b6d4;
+
+  color: #06131c;
+
+  border-color: #06b6d4;
+}
+
+.movie-card button:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================================================
+   NO MOVIES
+========================================================= */
+
+.movie-list > p {
+  grid-column: 1 / -1;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  color: #94a3b8;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+
+
+.about {
+  min-height: calc(100vh - 76px);
+
+  padding: 90px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(34, 211, 238, 0.10),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(249, 115, 22, 0.08),
+      transparent 35%
+    ),
+    #07101c;
+}
+
+
+/* About heading */
+
+.about h1 {
+  margin-bottom: 30px;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1.1;
+
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+
+  color: #f8fafc;
+}
+
+
+/* Cyan accent under heading */
+
+.about h1::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 4px;
+
+  margin: 18px auto 0;
+
+  border-radius: 10px;
+
+  background: #22d3ee;
+}
+
+
+/* About paragraphs */
+
+.about p {
+  max-width: 650px;
+
+  margin: 8px auto;
+
+  color: #94a3b8;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* First paragraph */
+
+.about p:first-of-type {
+  margin-top: 5px;
+}
+
+
+/* Subtle card effect for paragraphs */
+
+.about p {
+  padding: 15px 25px;
+
+  background: rgba(14, 28, 44, 0.55);
+
+  border: 1px solid rgba(42, 61, 83, 0.7);
+
+  border-radius: 10px;
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.about p:hover {
+  border-color: rgba(34, 211, 238, 0.35);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ABOUT - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .about {
+    min-height: calc(100vh - 70px);
+
+    padding: 60px 20px;
+  }
+
+  .about h1 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 25px;
+  }
+
+  .about h1::after {
+    width: 55px;
+    height: 3px;
+
+    margin-top: 15px;
+  }
+
+  .about p {
+    padding: 14px 18px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+}
+
+
+/* =========================================================
+   ABOUT - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .about {
+    padding: 50px 15px;
+  }
+
+  .about h1 {
+    font-size: 32px;
+  }
+
+  .about p {
+    font-size: 14px;
+
+    padding: 12px 15px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .movie-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* ---------- NAVBAR ---------- */
+
+  .nav-bar {
+    height: auto;
+
+    min-height: 70px;
+
+    padding: 15px 5%;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .nav-bar h1 {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .nav-links a {
+    padding: 4px 0;
+  }
+
+  .nav-links a:first-child::after {
+    bottom: -5px;
+  }
+
+
+  /* ---------- SEARCH ---------- */
+
+  .search-bar {
+    padding: 50px 18px 55px;
+  }
+
+  .search-heading h2 {
+    font-size: 32px;
+
+    letter-spacing: -1px;
+  }
+
+  .search-heading h4 {
+    font-size: 15px;
+
+    margin-bottom: 25px;
+  }
+
+  .search-box {
+    height: 55px;
+  }
+
+  .search-icon {
+    width: 48px;
+
+    font-size: 27px;
+  }
+
+  .search-box input {
+    font-size: 14px;
+  }
+
+  .search-box button {
+    min-width: 95px;
+
+    padding: 0 18px;
+
+    font-size: 14px;
+  }
+
+
+  /* ---------- RESULTS ---------- */
+
+  main > section:not(.search-bar) {
+    padding: 32px 18px 55px;
+  }
+
+  main > section:not(.search-bar) > div:first-child {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+
+  /* ---------- MOVIE LIST ---------- */
+
+  .movie-list {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  /* ---------- MOVIE CARD ---------- */
+
+  .movie-card {
+    grid-template-columns: 105px 1fr;
+
+    padding: 14px;
+
+    column-gap: 0;
+  }
+
+  .movie-card img {
+    width: 105px;
+
+    height: 155px;
+  }
+
+  .movie-info {
+    padding-left: 15px;
+
+    padding-top: 4px;
+  }
+
+  .movie-info h3 {
+    font-size: 16px;
+  }
+
+  .movie-details {
+    padding-left: 15px;
+
+    gap: 10px;
+
+    margin-top: 8px;
+  }
+
+  .movie-details span {
+    font-size: 13px;
+  }
+
+  .movie-card button {
+    margin-left: 15px;
+
+    padding: 8px 12px;
+
+    font-size: 12px;
+  }
+
+
+  /* ---------- ABOUT ---------- */
+
+  .about-page {
+    padding: 60px 20px;
+  }
+
+  .about-page h1 {
+    font-size: 40px;
+
+    letter-spacing: -1px;
+  }
+
+  .about-page p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .nav-bar h1 {
+    font-size: 20px;
+  }
+
+
+  .search-heading h2 {
+    font-size: 28px;
+  }
+
+
+  .search-box {
+    height: 52px;
+  }
+
+  .search-icon {
+    width: 40px;
+
+    font-size: 24px;
+  }
+
+  .search-box button {
+    min-width: 82px;
+
+    padding: 0 12px;
+
+    font-size: 13px;
+  }
+
+
+  .movie-card {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .movie-card img {
+    width: 90px;
+
+    height: 135px;
+  }
+
+  .movie-info {
+    padding-left: 12px;
+  }
+
+  .movie-info h3 {
+    font-size: 15px;
+  }
+
+  .movie-details {
+    padding-left: 12px;
+  }
+
+  .movie-details span {
+    font-size: 12px;
+  }
+
+  .movie-card button {
+    margin-left: 12px;
+
+    padding: 7px 10px;
+  }
+
+}
