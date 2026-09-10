@@ -18,7 +18,7 @@ function ShoppingCart({ products }) {
 
   const decrease = (id) => {
     setCart(cart.map((product) => 
-        id === product.id ? { ...product, quantity: Math.max(1,product.quantity) - 1 }  : product
+        id === product.id ? { ...product, quantity: Math.max(1,product.quantity - 1)}  : product
     ));
   }
 
